@@ -1,0 +1,276 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Light mode */
+body {
+    background: linear-gradient(135deg, #e6d6ff, #c3b1ff);
+}
+
+
+
+
+
+/* Navbar */
+nav {
+    background: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-left: 15px;
+    cursor: pointer;
+    color: grey;
+}
+
+nav li:hover {
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: grey;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 150, 0.3),
+                    0 0 10px rgba(0, 255, 150, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 255, 150, 0.6),
+                    0 0 30px rgba(0, 255, 150, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 150, 0.3),
+                    0 0 10px rgba(0, 255, 150, 0.2);
+    }
+}
+
+/* Main Container */
+.inputGroup {
+    width: 380px;
+    margin: 60px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.2),
+        inset 0 0 10px rgba(255,255,255,0.5);
+    text-align: center;
+    transition: 0.3s;
+
+    /* Glow in light mode */
+    animation: glowPulse 4s infinite;
+}
+
+/* Title */
+.inputGroup h2 {
+    margin-bottom: 15px;
+}
+
+/* Input */
+.inputGroup input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.inputGroup input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/* Button */
+.inputGroup button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    /* Glow for button */
+    animation: glowPulse 4s infinite;
+}
+
+.inputGroup button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Task List */
+#taskList {
+    margin-top: 20px;
+    padding: 0;
+}
+
+/* Task items */
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #eaeaea);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+#taskList li:hover {
+    transform: translateY(-3px);
+}
+
+/* Completed button */
+#taskList li button {
+    background: crimson;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#taskList li button:hover {
+    background: darkred;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+/* Dark card with glow */
+.dark .inputGroup {
+    background: #1e1e1e;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 150, 0.4),
+        0 0 20px rgba(0, 255, 150, 0.3),
+        0 0 40px rgba(0, 255, 150, 0.2);
+}
+
+/* Dark input */
+.dark input {
+    background: #333;
+    color: white;
+    border: 2px solid #00ff99;
+    box-shadow: 0 0 8px rgba(0, 255, 150, 0.5);
+}
+
+/* Dark tasks */
+.dark #taskList li {
+    background: #2c2c2c;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.2);
+}
+
+/* Dark buttons */
+.dark button {
+    background: #555;
+}
+
+.dark button:hover {
+    background: #777;
+}
+
+/* Extra glow for button in dark */
+.dark .inputGroup button {
+    background: #00cc66;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.6);
+}
+
+.dark .inputGroup button:hover {
+    box-shadow: 
+        0 0 15px rgba(0, 255, 150, 0.9),
+        0 0 30px rgba(0, 255, 150, 0.6);
+}
+
+
+.aboutme {
+    width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #f3e8ff);
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.2),
+        inset 0 0 15px rgba(255,255,255,0.6);
+    line-height: 1.7;
+    transition: 0.3s;
+
+    /* Glow animation (same style as index) */
+    animation: glowPulse 4s infinite;
+}
+
+.aboutme h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6d28d9;
+}
+
+.aboutme h2 {
+    margin-top: 20px;
+    color: #7c3aed;
+}
+
+.aboutme p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.aboutme ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.aboutme ul li {
+    display: list-item;   /* 👈 important fix */
+    margin: 5px 0;
+    color: #444;
+}
+.dark .aboutme {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 150, 0.4),
+        0 0 20px rgba(0, 255, 150, 0.3),
+        0 0 40px rgba(0, 255, 150, 0.2);
+}
+
+.dark .aboutme h1,
+.dark .aboutme h2 {
+    color: #00ff99;
+}
+
+.dark .aboutme p,
+.dark .aboutme li {
+    color: #ddd;
+}
+.aboutme:hover {
+    transform: translateY(-5px);
+}
+.aboutme {
+    backdrop-filter: blur(10px);
+}

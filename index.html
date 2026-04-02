@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>To-Do List</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link JS -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <h1 class="one">To-Do List</h1>
+        <ul>
+          <ul>
+  <li><a href="index.html">Home</a> |</li>
+  <li><a href="about.html">About</a> |</li>
+  <li onclick="toggleMode()" class="one2">🌙 Night Mode</li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="inputGroup">
+    <h2>Tasks</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task" />
+   <button onclick="addTask()">Add Task</button>
+  
+
+    <ul id="taskList">
+      <li>gym <button onclick="deleteTask(event)">Completed</button></li>
+    </ul>
+
+    </div>
+
+  </body>
+</html>
